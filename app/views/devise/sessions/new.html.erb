@@ -1,8 +1,11 @@
-<div class='wrapper'>
    <h1 class='title'>ログイン</h1>
-
-<%= form_with model: @user, url: user_session_path, method: :post, local: true do |f| %>
-  <div class="field">
+<%= form_with model: @user, url: user_session_path, method: :post, class: 'registration-main', local: true do |f| %>
+  <%#エラーメッセージの表示 %>
+  <div class='login-flash-message'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
+   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -18,7 +21,7 @@
   <div class="registrations-link">
     <%= link_to "新規登録はこちらから", new_user_registration_path, class:'registrations-link' %>
   </div>
-</div>
+
 <% end %>
 
 
