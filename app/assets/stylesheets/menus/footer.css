@@ -1,0 +1,20 @@
+
+.footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: #272727;
+  background-color: #FFF;
+  text-align: center;
+}
+
+.menus-app-footer-icon {
+  width: 20vw;
+  vertical-align: bottom;
+}
+
+.footer>p {
+  font-size: 14px;
+}
+
+
+
